@@ -1,0 +1,6 @@
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 3001
+const dbConnection = require('./db')
+app.get('/', (req, res) => res.send('Hello World!'))
+app.listen(port, () => console.log(`Node JS server started at port ${port}!`))
